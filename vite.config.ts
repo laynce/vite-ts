@@ -19,6 +19,11 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       minify: false,
+      // lib: { // 打包库模式
+      //   name: 'myUtil',
+      //   fileName: 'my-util',
+      //   entry: 'main.ts'
+      // }
     }
   }
   
