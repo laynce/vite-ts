@@ -1,18 +1,3 @@
-interface getDateType {
-  (): string
-}
 
-interface setDateType {
-  (date: string): string
-}
+export { getDate, setDate } from "@/base"
 
-
-export const getDate: getDateType  = ()=> {
-
-  return new Date().toLocaleDateString()
-}
-
-
-export const setDate: setDateType = (date: string): string => {
-  return new Date(date).toLocaleDateString()
-}

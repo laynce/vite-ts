@@ -1,6 +1,6 @@
 import * as path from 'path'
 import { defineConfig, loadEnv } from 'vite'
-
+import myPlugin from './myPlugin'
 export default defineConfig(({ mode }) => {
 
 
@@ -19,12 +19,15 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       minify: false,
-      // lib: { // 打包库模式
+      // lib: {
       //   name: 'myUtil',
       //   fileName: 'my-util',
       //   entry: 'main.ts'
       // }
-    }
+    },
+    plugins: [
+      myPlugin()
+    ]
   }
   
 })
