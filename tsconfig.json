@@ -3,11 +3,11 @@
     "module": "esnext",
     "moduleResolution": "node",
     "baseUrl": ".",
-    "types": ["vite/client"], // 解决使用import.meta.glob及vite特有功能时ts类型报错问题
+    "types": ["vite/client", "node"], // vite/client解决使用import.meta.glob及vite特有功能时ts类型报错问题
     "paths": {  // 配置路径别名
       "@/*": ["src/*"]
     },
-    "allowSyntheticDefaultImports": false /* 允许从没有设置默认导出的模块中默认导入，仅用于提示，不影响编译结果*/
+    "allowSyntheticDefaultImports": true, /* 允许从没有设置默认导出的模块中默认导入，仅用于提示，不影响编译结果*/
+    "resolveJsonModule": true
   }
-  
 }

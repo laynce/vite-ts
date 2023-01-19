@@ -1,6 +1,9 @@
 import * as path from 'path'
 import { defineConfig, loadEnv } from 'vite'
-import myPlugin from './myPlugin'
+import myPlugin from './plugins/myPlugin'
+import myVitrualPlugin from './plugins/myVitrualPlugin'
+import pkg from './package.json'
+
 export default defineConfig(({ mode }) => {
 
 
@@ -26,7 +29,8 @@ export default defineConfig(({ mode }) => {
       // }
     },
     plugins: [
-      myPlugin()
+      myPlugin(),
+      myVitrualPlugin({ current: pkg.version }),
     ]
   }
   

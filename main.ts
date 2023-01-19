@@ -1,4 +1,5 @@
 import { getDate, setDate } from "@/util"
+import {getVersion } from "virtual:my-version"
 const a: number = 10
 
 interface Person {
@@ -36,6 +37,7 @@ const app_version = process.env.app_version
 const mode = process.env.mode
 
 console.log('%capp版本号' + app_version + ';%c模式' + mode, "color: green; ", "color: pink")
+console.log('%c虚拟模块的版本号' + getVersion(), "color: green; ")
 // export {}
 /* 
  export {}// 加这个为了处理“无法重新声明块范围变量“P和a”
